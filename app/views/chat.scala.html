@@ -1,0 +1,94 @@
+@(title: String, scripts: Html = Html(""))(implicit messages: Messages, webJarAssets: WebJarAssets)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>@title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+     -->
+    <link media="all" type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+
+    <link media="all" type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.10/jquery.scrollbar.min.css">
+ 
+  <link media="all" type="text/css" rel="stylesheet" href="@routes.Assets.at("css/bootstrap.min.css")">
+  <link rel="stylesheet" href="@routes.Assets.at("css/common.css")">
+  <link rel="stylesheet" href="@routes.Assets.at("css/chat_layout.css")">
+  <link rel="stylesheet" href="@routes.Assets.at("css/chat-panel.css")">
+  <link rel="stylesheet" href="@routes.Assets.at("css/themes.css")">
+    
+
+</head>
+
+<body class="theme-dark">
+    <nav class="navbar navbar-inverse navbar-fixed-top sidebar" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <!--  <li class="sidebar-brand">
+
+            </li>
+          -->
+            <li>
+                <div class="logo"><img src="@routes.Assets.at("img/chatup.png")" height="80px"></div>
+            </li>
+            <li>
+                <div class="sidebar-menu">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="#">
+                                # general </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        <div class="share">
+            <h4>Share us:</h4>
+            <div class="social"><img src="@routes.Assets.at("img/facebook.png")" width="40px" /></div>
+            <div class="social"><img src="@routes.Assets.at("img/twitter.png")" width="40px"></div>
+            <div class="social"><img src="@routes.Assets.at("img/google-plus.png")" width="40px"></div>
+
+        </div>
+    </nav>
+  
+  <div class="container-fluid main-content">
+  <div class="row">
+    <div class="col-md-12 chat-panel">
+      <div class="row">
+        <div class="col-md-12 chat-msgs scroll-me">
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  
+   <!-- row for the form -->
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 panel-footer inside-chat-footer">
+        <form id="chat-form" method="post">
+          <div class="input-group message">
+            <input type="text" class="input-sm reply" placeholder="Type your reply here..." />
+            <button type="button" class="btn-default post">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Endof the form -->
+    
+</div>
+
+    <script type="text/javascript" src="@routes.Assets.at("js/jquery-1.12.4.min.js")"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.10/jquery.scrollbar.min.js"></script>
+
+    <script type="text/javascript" src="@routes.Assets.at("js/chat_layout.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("js/chat.main.js")"></script>
+</body>
+
+</html>
